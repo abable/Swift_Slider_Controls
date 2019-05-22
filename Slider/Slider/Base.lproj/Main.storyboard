@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bW7-kU-v2M">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Slider-->
+        <scene sceneID="Lrb-gw-XjG">
+            <objects>
+                <viewController title="Simple Slider" id="bW7-kU-v2M" customClass="ViewController" customModule="Slider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyA-hy-xAL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhj-Ig-Npk">
+                                <rect key="frame" x="16" y="686" width="382" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-4c-uWc">
+                                        <rect key="frame" x="16" y="34" width="350" height="150"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tWl-rI-tw5">
+                                                <rect key="frame" x="-2" y="0.0" width="354" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="bW7-kU-v2M" eventType="valueChanged" id="RZL-BG-EIW"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Chf-Mo-6NK">
+                                                <rect key="frame" x="-2" y="60" width="354" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="bW7-kU-v2M" eventType="valueChanged" id="3Ea-0q-SWH"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3TV-rz-0fd">
+                                                <rect key="frame" x="-2" y="120" width="354" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="bW7-kU-v2M" eventType="valueChanged" id="IIt-lb-Hcd"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jeq-4c-uWc" secondAttribute="trailing" constant="16" id="3Hz-ww-UgL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jeq-4c-uWc" secondAttribute="bottom" constant="16" id="JHc-m9-Frn"/>
+                                    <constraint firstAttribute="height" constant="200" id="U7u-kd-nHc"/>
+                                    <constraint firstItem="Jeq-4c-uWc" firstAttribute="leading" secondItem="xhj-Ig-Npk" secondAttribute="leading" constant="16" id="cjH-fD-27V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xhj-Ig-Npk" firstAttribute="leading" secondItem="KyA-hy-xAL" secondAttribute="leading" constant="16" id="RmI-hJ-8tL"/>
+                            <constraint firstAttribute="bottom" secondItem="xhj-Ig-Npk" secondAttribute="bottom" constant="10" id="fkF-t0-Qn7"/>
+                            <constraint firstAttribute="trailing" secondItem="xhj-Ig-Npk" secondAttribute="trailing" constant="16" id="x5a-np-lER"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kax-CQ-mav"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="3TV-rz-0fd" id="OkS-r0-8KL"/>
+                        <outlet property="greenSlider" destination="Chf-Mo-6NK" id="RlH-rx-avp"/>
+                        <outlet property="redSlider" destination="tWl-rI-tw5" id="hrI-db-gE1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCC-bv-hzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="842"/>
+        </scene>
+    </scenes>
+</document>
