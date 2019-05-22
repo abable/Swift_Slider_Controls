@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1lk-j3-QdE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Non-Continuous Slider-->
+        <scene sceneID="4GU-Ud-Gdm">
+            <objects>
+                <viewController title="Non-Continuous Slider" id="1lk-j3-QdE" customClass="ViewController" customModule="Non_Continuous_Slider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bem-vR-MPo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-fw-80B">
+                                <rect key="frame" x="20" y="288" width="374" height="330"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-U5-DoI">
+                                        <rect key="frame" x="150.5" y="0.0" width="73" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EIC-SU-JNy">
+                                        <rect key="frame" x="-2" y="110" width="378" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged1:" destination="1lk-j3-QdE" eventType="valueChanged" id="O2S-Wj-Ngr"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b8-NL-50y">
+                                        <rect key="frame" x="150.5" y="190" width="73" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-Lt-2mN">
+                                        <rect key="frame" x="-2" y="300" width="378" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged2:" destination="1lk-j3-QdE" eventType="valueChanged" id="g4r-MF-QmW"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Z87-Lt-2mN" secondAttribute="trailing" id="9PS-QE-WGg"/>
+                                    <constraint firstItem="EIC-SU-JNy" firstAttribute="leading" secondItem="TJ3-fw-80B" secondAttribute="leading" id="mH1-Ac-eeB"/>
+                                    <constraint firstItem="Z87-Lt-2mN" firstAttribute="leading" secondItem="TJ3-fw-80B" secondAttribute="leading" id="t2Y-SJ-4c5"/>
+                                    <constraint firstAttribute="trailing" secondItem="EIC-SU-JNy" secondAttribute="trailing" id="xhn-va-GUc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TJ3-fw-80B" firstAttribute="centerX" secondItem="4Sk-BD-O1e" secondAttribute="centerX" id="4FV-ya-CXB"/>
+                            <constraint firstItem="TJ3-fw-80B" firstAttribute="centerY" secondItem="4Sk-BD-O1e" secondAttribute="centerY" id="JsZ-ln-9ws"/>
+                            <constraint firstItem="4Sk-BD-O1e" firstAttribute="trailing" secondItem="TJ3-fw-80B" secondAttribute="trailing" constant="20" id="a2R-QN-d44"/>
+                            <constraint firstItem="TJ3-fw-80B" firstAttribute="leading" secondItem="4Sk-BD-O1e" secondAttribute="leading" constant="20" id="skV-lY-voc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Sk-BD-O1e"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider1" destination="EIC-SU-JNy" id="cMq-Ss-G4x"/>
+                        <outlet property="slider2" destination="Z87-Lt-2mN" id="xOE-Sl-ZqF"/>
+                        <outlet property="valueLabel1" destination="ueo-U5-DoI" id="ZXA-hl-0Kd"/>
+                        <outlet property="valueLabel2" destination="7b8-NL-50y" id="C9c-zp-eh3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2LY-ig-X6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="812"/>
+        </scene>
+    </scenes>
+</document>
