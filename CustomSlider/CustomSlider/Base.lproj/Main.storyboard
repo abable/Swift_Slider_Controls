@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wrl-xf-SJJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Slider-->
+        <scene sceneID="t6G-uK-A02">
+            <objects>
+                <viewController title="Custom Slider" id="Wrl-xf-SJJ" customClass="ViewController" customModule="CustomSlider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xgo-M9-Wqe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0BP-Ut-VHx">
+                                <rect key="frame" x="50" y="438" width="314" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0BP-Ut-VHx" firstAttribute="leading" secondItem="ypu-jh-oLU" secondAttribute="leading" constant="52" id="GiJ-iB-8Mf"/>
+                            <constraint firstItem="ypu-jh-oLU" firstAttribute="trailing" secondItem="0BP-Ut-VHx" secondAttribute="trailing" constant="52" id="kDk-uD-WLf"/>
+                            <constraint firstItem="0BP-Ut-VHx" firstAttribute="centerY" secondItem="ypu-jh-oLU" secondAttribute="centerY" id="kED-D5-4WZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ypu-jh-oLU"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="0BP-Ut-VHx" id="Nch-Lt-iUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frM-cu-IvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="731"/>
+        </scene>
+    </scenes>
+</document>
